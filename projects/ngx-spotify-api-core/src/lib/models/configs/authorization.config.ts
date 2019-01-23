@@ -20,7 +20,7 @@ export class AuthorizationConfig {
   /**
    * @description This used to prefix the access- and refreshToken inside the local storage.
    */
-  storagePrefix?: string = 'spotify-';
+  storagePrefix?: string = 'ngx-spotify-api-';
 
   /**
    * @description This is an array of all scopes you need your application to access to. Default all scopes will be requested

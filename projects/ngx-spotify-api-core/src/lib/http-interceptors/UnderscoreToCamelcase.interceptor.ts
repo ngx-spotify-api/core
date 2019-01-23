@@ -3,11 +3,12 @@ import {Observable} from 'rxjs';
 import {map, take} from 'rxjs/operators';
 import {Injectable} from '@angular/core';
 import {ApiConfig} from '../models/configs/api.config';
+import {AuthorizationConfig} from "../models/configs";
 
 @Injectable()
 export class UnderscoreToCamelcaseInterceptor implements HttpInterceptor {
 
-    constructor(private apiConfig: ApiConfig) {}
+    constructor(private apiConfig: ApiConfig, private authConfig: AuthorizationConfig) {}
 
     private transformObjectKeysToCamelCase(object: any): any {
         if (object == null || object === {}) {
@@ -32,7 +33,7 @@ export class UnderscoreToCamelcaseInterceptor implements HttpInterceptor {
     }
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         return next.handle(req).pipe(map((res: HttpResponse<any>): HttpResponse<any> => {
-            if (req && req.url && req.url.includes(this.apiConfig.baseUrl) && res.body) {
+            if (req && req.url && (req.url.includes(this.authConfig.authServerUrl) || req.url.includes(this.apiConfig.baseUrl)) && res.body) {
                 return res.clone({
                     body: this.transformObjectKeysToCamelCase(res.body)
                 });
