@@ -2,7 +2,7 @@ export class AuthorizationConfig {
   /**
    * @description The redirectUri is used to redirect the user after he grants or denies access for your application
    */
-  redirectUri = 'http://localhost';
+  redirectUri?: string = 'http://localhost:4200/';
 
   /**
    * @description Due you need a server to request the access token, when you obtain app authorization by authorization code.
@@ -10,7 +10,7 @@ export class AuthorizationConfig {
    * which adds the needed authorization to the request,
    * forwards it to the spotify api, and returns the response of the spotify api.
    */
-  authServerUrl: string;
+  authServerUrl?: string = 'http://localhost:3000/api/token';
 
   /**
    * @description This is the clientId of your application.
@@ -20,7 +20,7 @@ export class AuthorizationConfig {
   /**
    * @description This used to prefix the access- and refreshToken inside the local storage.
    */
-  storagePrefix = 'spotify-';
+  storagePrefix?: string = 'spotify-';
 
   /**
    * @description This is an array of all scopes you need your application to access to. Default all scopes will be requested

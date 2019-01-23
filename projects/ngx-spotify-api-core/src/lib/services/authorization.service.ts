@@ -46,7 +46,7 @@ export class AuthorizationService {
       '&state=' + 'login' +
       '&scope=' + encodeURIComponent(this.config.scopes.join(' '));
 
-    window.open(href);
+    window.location.href = href;
   }
   public abortAuthorization(): void {
     this.authorizing = false;

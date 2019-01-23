@@ -1,3 +1,3 @@
 export class ApiConfig {
-  baseUrl: string;
+  baseUrl?: string = 'https://api.spotify.com';
 }

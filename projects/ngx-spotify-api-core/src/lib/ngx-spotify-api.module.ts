@@ -37,6 +37,16 @@ import {ApiConfig, AuthorizationConfig, SpotifyApiConfig} from './models/configs
 })
 export class NgxSpotifyApiModule {
   static forRoot(config: SpotifyApiConfig): ModuleWithProviders {
+    config = {
+      api: {
+        ...new ApiConfig(),
+        ...config.api
+      },
+      authorization: {
+        ...new AuthorizationConfig(),
+        ...config.authorization
+      }
+    };
     return {
       ngModule: NgxSpotifyApiModule,
       providers: [
