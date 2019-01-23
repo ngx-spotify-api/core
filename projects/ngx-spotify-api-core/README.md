@@ -1,5 +1,4 @@
-# NgxSpotifyApi
-## Introduction
+# @ngx-spotify-api/core
 This module was written to use the Spotify-Api type-save inside an angular application.
 If there are issues please tell me, so I can fix them.
 
@@ -9,11 +8,11 @@ This module requires a proxy-server for authentication. For now [ngx-spotify-api
 ### Installation
 With npm:
 ```
-    npm install --save @ngx/spotify-api
+    npm install --save @ngx-spotify-api/core
 ```
 With yarn:
 ```
-    yarn add @ngx/spotify-api
+    yarn add @ngx-spotify-api/core
 ```
 ### Init
 ```angular2
