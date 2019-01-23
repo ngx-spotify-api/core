@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {NgxSpotifyApiModule} from '../../projects/ngx-spotify-api/src/lib';
+import {NgxSpotifyApiModule} from '../../projects/ngx-spotify-api-core/src/lib';
 
 @NgModule({
   declarations: [
