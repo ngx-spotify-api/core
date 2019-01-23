@@ -1,17 +1,18 @@
 {
-  "name": "ngx-spotify-api",
-  "version": "1.0.1",
+  "name": "@ngx-spotify-api/core",
+  "version": "1.0.0",
+  "private": false,
   "author": {
     "name": "Josha Landsmann",
     "email": "landsmann@antony-systemhaus.de",
     "url": "https://github.com/jlandsmann"
   },
   "repository": {
-    "url": "https://github.com/jlandsmann/ngx-spotify-api.git",
+    "url": "https://github.com/ngx-spotify-api/core.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/jlandsmann/ngx-spotify-api/issues"
+    "url": "https://github.com/ngx-spotify-api/core/issues"
   },
   "license": "MIT",
   "peerDependencies": {

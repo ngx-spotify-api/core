@@ -106,7 +106,6 @@
         }
       }
     },
-    "ngx-spotify-api-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -134,9 +133,9 @@
         }
       }
     },
-    "ngx-spotify-api": {
-      "root": "projects/ngx-spotify-api",
-      "sourceRoot": "projects/ngx-spotify-api/src",
+    "ngx-spotify-api-core": {
+      "root": "projects/ngx-spotify-api-core",
+      "sourceRoot": "projects/ngx-spotify-api-core/src",
       "projectType": "library",
       "prefix": "lib",
       "architect": {

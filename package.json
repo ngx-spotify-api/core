@@ -1,6 +1,7 @@
 {
-  "name": "ngx-spotify-api",
-  "version": "0.0.0",
+  "name": "ngx-spotify-api-core",
+  "version": "1.0.0",
+  "private": true,
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,7 +10,6 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "~7.2.0",
     "@angular/common": "~7.2.0",
