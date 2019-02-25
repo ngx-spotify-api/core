@@ -7,6 +7,7 @@
     "email": "git.landsmann@gmail.com",
     "url": "https://github.com/jlandsmann"
   },
+  "keywords": ["angular", "angular7", "spotify", "api", "REST", "ngx", "typescript"],
   "repository": {
     "url": "https://github.com/ngx-spotify-api/core.git",
     "type": "git"

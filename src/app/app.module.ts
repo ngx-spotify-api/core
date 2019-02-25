@@ -23,8 +23,7 @@ import {RouterModule} from "@angular/router";
     ]),
     NgxSpotifyApiModule.forRoot({
       authorization: {
-        redirectUri: 'http://localhost:4200/auth',
-        clientId: 'b5602abb639e4bcbbfa2162e136dd37e',
+        accessToken: '1234567890'
       }
     })
   ],

@@ -4,7 +4,6 @@ import { HttpClientModule } from '@angular/common/http';
 import {
   AlbumService,
   ArtistService,
-  AuthorizationService,
   BrowseService,
   FollowService,
   LibraryService,
@@ -22,7 +21,6 @@ import {ApiConfig, AuthorizationConfig, SpotifyApiConfig} from './models/configs
   providers: [
     ArtistService,
     AlbumService,
-    AuthorizationService,
     BrowseService,
     FollowService,
     LibraryService,

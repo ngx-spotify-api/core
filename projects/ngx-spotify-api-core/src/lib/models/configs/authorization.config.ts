@@ -1,21 +1,8 @@
 export class AuthorizationConfig {
   /**
-   * @description The redirectUri is used to redirect the user after he grants or denies access for your application
+   * @description This will be used for signing your requests. An access token is required for all endpoints
    */
-  redirectUri?: string = 'http://localhost:4200/';
-
-  /**
-   * @description Due you need a server to request the access token, when you obtain app authorization by authorization code.
-   * The authServerUrl will used to request the AccessToken. In default case the url points to a server,
-   * which adds the needed authorization to the request,
-   * forwards it to the spotify api, and returns the response of the spotify api.
-   */
-  authServerUrl?: string = 'http://localhost:3000/api/token';
-
-  /**
-   * @description This is the clientId of your application.
-   */
-  clientId: string;
+  accessToken: string;
 
   /**
    * @description This used to prefix the access- and refreshToken inside the local storage.

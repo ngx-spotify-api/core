@@ -33,7 +33,7 @@ export class UnderscoreToCamelcaseInterceptor implements HttpInterceptor {
     }
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         return next.handle(req).pipe(map((res: HttpResponse<any>): HttpResponse<any> => {
-            if (req && req.url && (req.url.includes(this.authConfig.authServerUrl) || req.url.includes(this.apiConfig.baseUrl)) && res.body) {
+            if (req && req.url && req.url.includes(this.apiConfig.baseUrl) && res.body) {
                 return res.clone({
                     body: this.transformObjectKeysToCamelCase(res.body)
                 });
