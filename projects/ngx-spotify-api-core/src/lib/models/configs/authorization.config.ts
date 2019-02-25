@@ -2,12 +2,12 @@ export class AuthorizationConfig {
   /**
    * @description This will be used for signing your requests. An access token is required for all endpoints
    */
-  accessToken: string;
+  accessToken: () => string;
 
   /**
    * @description This used to prefix the access- and refreshToken inside the local storage.
    */
-  storagePrefix?: string = 'ngx-spotify-api-';
+  storagePrefix = 'ngx-spotify-api-';
 
   /**
    * @description This is an array of all scopes you need your application to access to. Default all scopes will be requested
