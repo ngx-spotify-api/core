@@ -1,6 +1,5 @@
 export * from './album.service';
 export * from './artist.service';
-export * from './authorization.service';
 export * from './browse.service';
 export * from './follow.service';
 export * from './library.service';
