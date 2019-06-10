@@ -13,7 +13,7 @@ export class RemoveNullParamsInterceptor implements HttpInterceptor {
     if (req.url.indexOf(this.apiConfig.baseUrl) > -1) {
       req.params.keys().forEach((key: string) => {
         const param = newReq.params.get(key);
-        if (param == null) {
+        if (param == null || param === 'null' || param === 'undefined' || param === '') {
           newReq.params.delete(key);
         }
       });
