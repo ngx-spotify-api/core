@@ -1,8 +1,10 @@
+import {Observable} from 'rxjs';
+
 export class AuthorizationConfig {
   /**
    * @description This will be used for signing your requests. An access token is required for all endpoints
    */
-  accessToken: () => string;
+  accessToken: () => Observable<string>;
 
   /**
    * @description This used to prefix the access- and refreshToken inside the local storage.

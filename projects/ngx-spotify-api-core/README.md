@@ -116,6 +116,8 @@ With yarn:
 ### Configuration
 This is an example configuration
 ```angular2
+import {of} from 'rxjs';
+...
 @NgModule({
   ...
   imports: [
@@ -126,7 +128,7 @@ This is an example configuration
       },
       authorization: {
         storagePrefix: 'ngx-spotify-api-',
-        accessToken: '<your-access-token>'
+        accessToken: () => of('<your-access-token>')
       }
     })
   ],
