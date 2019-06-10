@@ -1,7 +1,7 @@
 import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Injectable} from '@angular/core';
-import {ApiConfig} from '../models/configs/api.config';
+import {ApiConfig} from '../models/configs';
 
 @Injectable()
 export class RemoveNullParamsInterceptor implements HttpInterceptor {
