@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {NgxSpotifyApiModule} from '../../projects/ngx-spotify-api-core/src/lib';
-import {RouterModule} from "@angular/router";
+import {RouterModule} from '@angular/router';
+import {of} from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {RouterModule} from "@angular/router";
     ]),
     NgxSpotifyApiModule.forRoot({
       authorization: {
-        accessToken: '1234567890'
+        accessToken: () => of('1234567890'),
+        storagePrefix: 'spotify-api-'
       }
     })
   ],

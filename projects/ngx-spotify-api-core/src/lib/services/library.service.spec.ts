@@ -4,8 +4,6 @@ import { LibraryService } from './library.service';
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
 import {ApiConfig} from '../models';
 import {HttpErrorResponse, HttpRequest} from '@angular/common/http';
-import {Observable} from 'rxjs';
-import {Http} from '@angular/http';
 import {Album} from '../models';
 import {Paging} from '../models';
 import {mockAlbums} from './album.service.spec';
