@@ -1,4 +1,4 @@
-import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from '@angular/common/http';
+import {HttpEvent, HttpHandler, HttpInterceptor, HttpParams, HttpRequest} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Injectable} from '@angular/core';
 import {ApiConfig} from '../models/configs';
@@ -9,15 +9,18 @@ export class RemoveNullParamsInterceptor implements HttpInterceptor {
 
   }
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    const newReq = req.clone();
+    const params: HttpParams = new HttpParams();
     if (req.url.indexOf(this.apiConfig.baseUrl) > -1) {
-      req.params.keys().forEach((key: string) => {
-        const param = newReq.params.get(key);
-        if (param == null || param === 'null' || param === 'undefined' || param === '') {
-          newReq.params.delete(key);
+      params.keys().forEach((key: string) => {
+        const param = params.get(key);
+        if (param != null && param !== 'null' && param !== 'undefined' && param !== '') {
+          params.set(key, param);
         }
       });
     }
+    const newReq = req.clone({
+      'params': params
+    });
     return next.handle(newReq);
   }
 }
