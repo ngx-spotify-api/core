@@ -22,7 +22,7 @@ export class PlayerService {
               private http: HttpClient) { }
 
   public nextTrack(deviceId?: string): Observable<boolean> {
-    return this.http.post(this.config.baseUrl + `/v1/me/player/next`, {
+    return this.http.post(this.config.baseUrl + `/v1/me/player/next`, {}, {
       params: {
         device_id: deviceId
       }
@@ -35,7 +35,7 @@ export class PlayerService {
   }
 
   public previousTrack(deviceId?: string): Observable<boolean> {
-    return this.http.post(this.config.baseUrl + `/v1/me/player/previous`, {
+    return this.http.post(this.config.baseUrl + `/v1/me/player/previous`, {}, {
       params: {
         device_id: deviceId
       }

@@ -56,6 +56,7 @@ describe('PlayerService', () => {
         });
 
         expect(req.request.method).toEqual('POST');
+        expect(req.request.params.has('device_id')).toBeTruthy();
 
         req.flush({}, { status: 204, statusText: 'NO CONTENT' });
       })();
