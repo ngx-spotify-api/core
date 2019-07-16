@@ -1,13 +1,13 @@
 {
   "name": "@ngx-spotify-api/core",
-  "version": "2.1.5",
+  "version": "2.2.0",
   "private": false,
   "author": {
     "name": "Josha Landsmann",
     "email": "git.landsmann@gmail.com",
     "url": "https://github.com/jlandsmann"
   },
-  "keywords": ["angular", "angular7", "spotify", "api", "REST", "ngx", "typescript"],
+  "keywords": ["angular", "angular8", "spotify", "api", "REST", "ngx", "typescript"],
   "repository": {
     "url": "https://github.com/ngx-spotify-api/core.git",
     "type": "git"
@@ -17,7 +17,7 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "@angular/common": "^7.1.0",
-    "@angular/core": "^7.1.0"
+    "@angular/common": "^8.1.1",
+    "@angular/core": "^8.1.1"
   }
 }
